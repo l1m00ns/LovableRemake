@@ -2,7 +2,7 @@
   --lv-ink: #1c1b1a;
   --lv-muted: #6f6d69;
   --lv-line: #e9e7e3;
-  --lv-cream: #fbfaf7;
+  --lv-cream: #fcfbf8;
   font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   color: var(--lv-ink);
   background: #fff;
@@ -12,43 +12,43 @@
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: #faf9f5; }
+body { margin: 0; background: #fcfbf8; }
 button, input, textarea { font: inherit; }
 button { cursor: pointer; color: inherit; }
 a { color: inherit; text-decoration: none; }
 #root { min-height: 100vh; }
 .lv { overflow-x: hidden; }
 
-.lv-header { position: sticky; top: 0; z-index: 40; display: flex; align-items: center; gap: 24px; height: 64px; padding: 0 max(24px, calc((100vw - 1180px) / 2)); background: rgba(250, 249, 245, 0.88); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(0, 0, 0, 0.04); }
-.lv-brand { display: flex; align-items: center; gap: 8px; border: 0; background: none; font-size: 19px; font-weight: 700; letter-spacing: -0.045em; color: #1c1b1a; }
-.lv-nav { display: flex; align-items: center; gap: 3px; margin: 0 auto; }
-.lv-nav > a, .lv-nav-item > button { display: flex; align-items: center; gap: 4px; height: 34px; padding: 0 10px; border: 0; border-radius: 8px; background: none; font-size: 13.5px; font-weight: 500; color: #2c2b29; }
+.lv-header { position: sticky; top: 0; z-index: 40; display: flex; align-items: center; gap: 24px; height: 74px; padding: 0 max(24px, calc((100vw - 1172px) / 2)); background: rgba(252, 251, 248, 0.88); backdrop-filter: blur(16px); }
+.lv-brand { display: flex; align-items: center; gap: 5px; padding-left: 1px; border: 0; background: none; font-size: 19.5px; font-weight: 700; letter-spacing: -0.05em; color: #1c1b1a; }
+.lv-nav { position: absolute; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 2px; }
+.lv-nav > a, .lv-nav-item > button { display: flex; align-items: center; gap: 4px; height: 34px; padding: 0 9px; border: 0; border-radius: 8px; background: none; font-size: 13.5px; font-weight: 500; color: #2c2b29; }
 .lv-nav > a:hover, .lv-nav-item > button:hover { background: #f4f2ee; }
 .lv-nav-item { position: relative; }
 .lv-dropdown { position: absolute; top: 42px; left: 0; width: 200px; padding: 6px; border: 1px solid #eae8e3; border-radius: 12px; background: #fff; box-shadow: 0 18px 44px rgba(28, 27, 26, 0.12); }
 .lv-dropdown a { display: block; padding: 8px 9px; border-radius: 6px; font-size: 12.5px; color: #33322f; }
 .lv-dropdown a:hover { background: #f6f4f0; }
-.lv-header-actions { display: flex; align-items: center; gap: 8px; }
-.lv-login { height: 36px; padding: 0 16px; border: 1px solid #dedbd5; border-radius: 20px; background: #fff; font-size: 12.5px; font-weight: 500; }
+.lv-header-actions { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+.lv-login { height: 38px; padding: 0 14px; border: 1px solid #dedbd5; border-radius: 20px; background: #fff; font-size: 13.5px; font-weight: 500; }
 .lv-login:hover { background: #f7f5f1; }
-.lv-getstarted { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 36px; padding: 0 17px; border: 0; border-radius: 20px; background: #1c1b1a; color: #fff; font-size: 12.5px; font-weight: 500; transition: background 0.16s, transform 0.16s; }
+.lv-getstarted { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 38px; padding: 0 15px; border: 0; border-radius: 20px; background: #1c1b1a; color: #fff; font-size: 13.5px; font-weight: 500; transition: background 0.16s, transform 0.16s; }
 .lv-getstarted:hover { background: #35332f; transform: translateY(-1px); }
 .lv-getstarted.big { height: 44px; padding: 0 21px; font-size: 13.5px; }
 .lv-menu-btn { display: none; border: 0; background: none; padding: 6px; }
-.lv-mobile-menu { position: absolute; top: 64px; left: 0; right: 0; display: grid; gap: 2px; padding: 14px 22px 18px; background: #faf9f5; border-bottom: 1px solid var(--lv-line); }
+.lv-mobile-menu { position: absolute; top: 74px; left: 0; right: 0; display: grid; gap: 2px; padding: 14px 22px 18px; background: #fcfbf8; border-bottom: 1px solid var(--lv-line); }
 .lv-mobile-menu a { padding: 10px 0; border-bottom: 1px solid #f0eeea; font-size: 14px; }
 .lv-mobile-menu .lv-getstarted { margin-top: 10px; }
 
-.lv-hero { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: calc(100vh - 64px); padding: 150px 24px 80px; text-align: center; overflow: hidden; }
+.lv-hero { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: calc(100vh - 74px); padding: 95px 24px 164px; text-align: center; overflow: hidden; }
 .lv-hero-glow { position: absolute; top: 8%; left: 50%; width: 900px; height: 520px; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 255, 255, 0.95), transparent 72%); pointer-events: none; }
-.lv-hero h1 { position: relative; margin: 0; font-size: clamp(40px, 3.4vw, 49px); line-height: 1.02; letter-spacing: -0.045em; font-weight: 700; color: #1b1a19; }
-.lv-hero > p { position: relative; margin: 16px 0 0; font-size: 17.5px; color: #6b6965; }
-.lv-composer { position: relative; z-index: 2; width: min(610px, 100%); margin-top: 34px; padding: 17px 20px 12px; border: 1px solid #e8e5df; border-radius: 22px; background: #fff; text-align: left; box-shadow: 0 16px 44px rgba(40, 37, 30, 0.08), 0 1px 2px rgba(40, 37, 30, 0.04); transition: box-shadow 0.18s, border 0.18s; }
+.lv-hero h1 { position: relative; margin: 0; font-size: clamp(38px, 3.16vw, 45.5px); line-height: 1.02; letter-spacing: -0.054em; font-weight: 700; color: #1b1a19; }
+.lv-hero > p { position: relative; margin: 6px 0 0; font-size: 16.5px; line-height: 1.3; color: #6b6965; }
+.lv-composer { position: relative; z-index: 2; width: min(604px, 100%); margin-top: 38.5px; padding: 18.5px 15px 6.5px; border: 1px solid #e8e5df; border-radius: 22px; background: #fff; text-align: left; box-shadow: 0 16px 44px rgba(40, 37, 30, 0.08), 0 1px 2px rgba(40, 37, 30, 0.04); transition: box-shadow 0.18s, border 0.18s; }
 .lv-composer:focus-within { border-color: #d8d3ca; box-shadow: 0 20px 54px rgba(40, 37, 30, 0.11); }
-.lv-composer textarea { display: block; width: 100%; min-height: 44px; resize: none; border: 0; outline: none; background: none; font-size: 16px; line-height: 1.5; color: #1c1b1a; }
+.lv-composer textarea { display: block; width: 100%; min-height: 32px; resize: none; border: 0; outline: none; background: none; font-size: 16px; line-height: 1.5; color: #1c1b1a; }
 .lv-composer textarea::placeholder { color: #a09d97; }
-.lv-composer-foot { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
-.lv-plus { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid #e5e2db; border-radius: 50%; background: #fff; color: #6f6d69; }
+.lv-composer-foot { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
+.lv-plus { display: grid; place-items: center; width: 32px; height: 32px; margin-left: -6px; border: 1px solid #e5e2db; border-radius: 50%; background: #fff; color: #6f6d69; }
 .lv-plus:hover { background: #f7f5f1; }
 .lv-composer-right { margin-left: auto; display: flex; align-items: center; gap: 6px; }
 .lv-buildmode { display: flex; align-items: center; gap: 4px; height: 32px; padding: 0 8px; border: 0; border-radius: 8px; background: none; font-size: 12.5px; color: #6f6d69; }
@@ -60,12 +60,13 @@ a { color: inherit; text-decoration: none; }
 .lv-suggestions button { height: 33px; padding: 0 13px; border: 1px solid #e9e6e0; border-radius: 17px; background: rgba(255, 255, 255, 0.7); font-size: 11.5px; color: #5b5955; backdrop-filter: blur(4px); }
 .lv-suggestions button:hover { background: #fff; border-color: #d6d1c8; }
 .lv-pastel { position: absolute; left: 0; right: 0; bottom: 0; height: 55%; pointer-events: none; z-index: 0; }
-.lv-pastel span { position: absolute; border-radius: 50%; filter: blur(52px); opacity: 0.75; }
-.lv-pastel .p1 { width: 46%; height: 90%; left: -8%; bottom: -34%; background: #c9d6ff; }
-.lv-pastel .p2 { width: 42%; height: 90%; right: -6%; bottom: -30%; background: #ffc9d8; }
-.lv-pastel .p3 { width: 46%; height: 70%; left: 27%; bottom: -34%; background: #ffe0b8; opacity: 0.6; }
-.lv-pastel .p4 { width: 30%; height: 50%; left: 40%; bottom: -20%; background: #e2ccff; opacity: 0.5; }
-.lv-hero::after { content: ""; position: absolute; inset: auto 0 0 0; height: 14%; background: linear-gradient(to top, rgba(250, 249, 245, 0.65), transparent); pointer-events: none; }
+.lv-pastel span { position: absolute; border-radius: 50%; filter: blur(56px); opacity: 0.6; }
+.lv-pastel .p1 { width: 48%; height: 72%; left: -15%; bottom: -10%; background: #c4d6fa; opacity: 0.45; }
+.lv-pastel .p2 { width: 48%; height: 72%; right: -15%; bottom: -10%; background: #c4d6fa; opacity: 0.45; }
+.lv-pastel .p3 { width: 44%; height: 58%; left: 6%; bottom: -34%; background: #ffdceb; opacity: 0.85; }
+.lv-pastel .p4 { width: 38%; height: 55%; left: 31%; bottom: -30%; background: #c9d9fb; opacity: 0.3; }
+.lv-pastel .p5 { width: 40%; height: 58%; right: 4%; bottom: -34%; background: #ffdceb; opacity: 0.85; }
+.lv-pastel .p6 { width: 100%; height: 22%; left: 0; bottom: -12%; border-radius: 0; background: #d7e3fb; filter: blur(60px); opacity: 0.22; }
 
 .lv-platform { max-width: 1200px; margin: 0 auto; padding: 104px 32px 110px; border-top: 1px solid #f0eeea; }
 .lv-platform-head { max-width: 640px; }
@@ -226,12 +227,12 @@ a { color: inherit; text-decoration: none; }
 .lv-footer-col a { display: block; margin: 8px 0; font-size: 11px; color: #6b6862; }
 .lv-footer-col a:hover { color: #1c1b1a; }
 
-.lv-cookie { position: fixed; right: 24px; bottom: 24px; z-index: 60; width: 280px; padding: 20px; border: 1px solid #e7e3dc; border-radius: 16px; background: #fff; box-shadow: 0 22px 60px rgba(40, 37, 30, 0.16); }
-.lv-cookie p { margin: 0 0 14px; font-size: 11.5px; line-height: 1.55; color: #4e4c48; }
+.lv-cookie { position: fixed; right: 16px; bottom: 14px; z-index: 60; width: 288px; padding: 25px 24px 26px; border: 1px solid #e7e3dc; border-radius: 20px; background: #fff; box-shadow: 0 22px 60px rgba(40, 37, 30, 0.14); }
+.lv-cookie p { margin: 0 0 18px; font-size: 13px; line-height: 21px; color: #3c3a37; }
 .lv-cookie p a { text-decoration: underline; }
-.lv-cookie-accept { width: 100%; height: 34px; border: 1px solid #ddd9d2; border-radius: 17px; background: #fff; font-size: 11.5px; font-weight: 500; }
+.lv-cookie-accept { width: 100%; height: 30px; border: 1px solid #ddd9d2; border-radius: 15px; background: #fff; font-size: 13px; font-weight: 500; }
 .lv-cookie-accept:hover { background: #f7f5f1; }
-.lv-cookie-text { display: block; width: 100%; margin-top: 8px; border: 0; background: none; font-size: 11px; color: #4e4c48; }
+.lv-cookie-text { display: block; width: 100%; height: 30px; margin-top: 12px; border: 0; background: none; font-size: 13px; color: #3c3a37; }
 .lv-cookie-text:hover { text-decoration: underline; }
 .lv-toast { position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%); z-index: 90; display: flex; align-items: center; gap: 7px; max-width: calc(100vw - 30px); padding: 9px 14px; border-radius: 10px; background: #1c1b1a; color: #fff; font-size: 11px; box-shadow: 0 14px 34px rgba(0, 0, 0, 0.25); }
 

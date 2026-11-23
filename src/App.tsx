@@ -81,22 +81,7 @@ const BEYOND = [
 const STACK = ["Analytics", "Payments", "Auth", "Storage", "Functions", "Email", "Search", "Queues"];
 
 function Mark({ size = 26 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 32 32" aria-hidden>
-      <defs>
-        <linearGradient id="lv-heart" x1="4" y1="28" x2="28" y2="4" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#FF5C8A" />
-          <stop offset="0.5" stopColor="#FF7A59" />
-          <stop offset="1" stopColor="#FFB347" />
-        </linearGradient>
-      </defs>
-      <rect x="2" y="2" width="28" height="28" rx="9" fill="url(#lv-heart)" />
-      <path
-        d="M16 24.4c-4.6-3.2-7.7-5.9-7.7-9.4 0-2.7 2-4.7 4.5-4.7 1.4 0 2.6.7 3.2 1.8.6-1.1 1.8-1.8 3.2-1.8 2.5 0 4.5 2 4.5 4.7 0 3.5-3.1 6.2-7.7 9.4Z"
-        fill="#fff"
-      />
-    </svg>
-  );
+  return <img src="/lovable-mark.png" width={size} height={size} alt="" aria-hidden className="lv-mark" />;
 }
 
 function MiniSite() {
@@ -345,7 +330,7 @@ export default function App() {
     <div className="lv">
       <header className="lv-header">
         <button className="lv-brand" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          <Mark size={25} /> <span>Lovable</span>
+          <Mark size={19} /> <span>Lovable</span>
         </button>
         <nav className="lv-nav">
           {NAV.map((n) => (
@@ -414,7 +399,7 @@ export default function App() {
               value={prompt}
               onChange={(e) => setPrompt(e.target.value)}
               onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); build(); } }}
-              rows={2}
+              rows={1}
               placeholder="Ask"
             />
             <div className="lv-composer-foot">
@@ -430,7 +415,7 @@ export default function App() {
           </motion.div>
 
           <div className="lv-pastel" aria-hidden>
-            <span className="p1" /><span className="p2" /><span className="p3" /><span className="p4" />
+            <span className="p6" /><span className="p1" /><span className="p2" /><span className="p3" /><span className="p4" /><span className="p5" />
           </div>
         </section>
 
